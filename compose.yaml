@@ -1,0 +1,10 @@
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:2026.11.3
+    ports:
+      - "127.0.0.1:18123:8123"
+    environment:
+      TZ: Europe/Paris
+    volumes:
+      - ./.ha-test:/config
+      - ./custom_components:/config/custom_components:ro

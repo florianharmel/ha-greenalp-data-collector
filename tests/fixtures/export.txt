@@ -1,0 +1,5 @@
+Date;000000ZZZ0 elec Fictif - Consommation (kWh);000000ZZZ0 elec Fictif - Index (kWh)
+2026-03-28;1.500;100
+2026-03-29;0;101.500
+2026-03-30;;101.500
+2026-03-31;2.250;103

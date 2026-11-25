@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "username": "Identifiant",
+          "password": "Mot de passe"
+        }
+      },
+      "reauth_confirm": {
+        "data": {
+          "password": "Mot de passe"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Identifiants refusés",
+      "cannot_connect": "Connexion impossible"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "interval_hours": "Fréquence en heures"
+        }
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "sync": {
+        "name": "Synchroniser"
+      },
+      "resync": {
+        "name": "Resynchroniser l’historique"
+      }
+    },
+    "sensor": {
+      "last_sync": {
+        "name": "Dernière synchronisation"
+      },
+      "last_data": {
+        "name": "Dernière donnée"
+      },
+      "data_age": {
+        "name": "Ancienneté de la dernière donnée"
+      },
+      "connection": {
+        "name": "Connexion GreenAlp"
+      },
+      "error": {
+        "name": "Dernière erreur"
+      }
+    }
+  }
+}

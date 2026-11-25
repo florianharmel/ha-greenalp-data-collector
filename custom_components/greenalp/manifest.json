@@ -1,0 +1,15 @@
+{
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [
+    "recorder"
+  ],
+  "documentation": "https://github.com/OWNER/greenalp-data-collector#readme",
+  "domain": "greenalp",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/OWNER/greenalp-data-collector/issues",
+  "name": "GreenAlp Data Collector",
+  "requirements": [],
+  "version": "0.1.0"
+}

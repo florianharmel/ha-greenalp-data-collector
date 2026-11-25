@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Credentials rejected",
+      "cannot_connect": "Cannot connect"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "interval_hours": "Interval in hours"
+        }
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "sync": {
+        "name": "Synchronize"
+      },
+      "resync": {
+        "name": "Resynchronize history"
+      }
+    },
+    "sensor": {
+      "last_sync": {
+        "name": "Last synchronization"
+      },
+      "last_data": {
+        "name": "Last available reading"
+      },
+      "data_age": {
+        "name": "Age of last reading"
+      },
+      "connection": {
+        "name": "GreenAlp connection"
+      },
+      "error": {
+        "name": "Last error"
+      }
+    }
+  }
+}
