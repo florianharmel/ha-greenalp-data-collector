@@ -19,6 +19,16 @@ Les capteurs par compteur indiquent la veille, la semaine civile commençant le 
 
 Chaque valeur journalière est publiée à la dernière heure du jour local. Elle apparaît donc à cette heure dans une vue horaire. Le CSV est traité en mémoire. Le mot de passe est stocké par Home Assistant dans son entrée de configuration. Protéger le dossier de configuration et ses sauvegardes. Les jetons restent en mémoire et les diagnostics exposent uniquement des catégories d’erreur.
 
+## Coûts électriques estimés
+
+Ouvrir les **Options** de l’intégration pour saisir le prix fixe TTC en EUR/kWh, l’abonnement mensuel TTC facultatif (0 EUR par défaut) et la date d’effet locale. L’abonnement est appliqué **par compteur électrique** et réparti sur les jours calendaires de chaque mois. Les coûts commencent à la date d’effet du premier tarif. Laisser les champs de tarif vides permet de modifier uniquement la fréquence.
+
+Pour changer de tarif, saisir le nouveau prix, l’abonnement applicable et la nouvelle date d’effet. Les tarifs sont conservés par date. Une nouvelle date passée, ou le remplacement d’un tarif passé, exige de cocher **Autoriser le recalcul des coûts passés**. La modification s’applique jusqu’au tarif suivant, s’il existe. Une resynchronisation applique à chaque jour son tarif historique. Elle recalcule les consommations corrigées et les cumuls associés sans créer de doublons.
+
+Les quatre capteurs **Coût estimé** donnent le total de la veille, de la semaine civile, du mois et de l’année en cours jusqu’à la veille, pour les jours couverts par un tarif. Leurs attributs donnent le coût de consommation et d’abonnement séparément ainsi que le nombre de jours manquants. Si la consommation d’un jour manque et que son prix du kWh est positif, le capteur de total reste inconnu pour la période concernée. L’abonnement reste calculable. Les montants sont des estimations TTC. L’intégration ne récupère aucune facture.
+
+Dans le tableau de bord **Énergie**, modifier la source **Consommation du réseau** GreenAlp, puis choisir la statistique qui suit les coûts totaux. Sélectionner **GreenAlp Coût estimé · Total …** avec le même suffixe de compteur que la série de consommation. Home Assistant associe les deux séries via `stat_cost`. Utiliser EUR comme devise de Home Assistant. La série cumulée affiche les charges connues, y compris l’abonnement les jours où le coût de consommation est encore inconnu. Les séries **Consommation** et **Abonnement** restent disponibles séparément dans Recorder. La série **Total** les agrège déjà.
+
 ## Mise à jour et désinstallation
 
 Pour mettre à jour, télécharger la version dans HACS et redémarrer. Pour une installation manuelle, remplacer le dossier de l’intégration et redémarrer. Une mise à jour conserve les séries Recorder tant que les identifiants de compteur et de compte restent stables.

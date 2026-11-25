@@ -22,9 +22,19 @@
     "step": {
       "init": {
         "data": {
-          "interval_hours": "Fréquence en heures"
-        }
+          "interval_hours": "Fréquence en heures",
+          "price_per_kwh": "Prix fixe TTC (EUR/kWh)",
+          "monthly_subscription": "Abonnement mensuel TTC par compteur (EUR)",
+          "effective_from": "Date d’effet du tarif (Europe/Paris)",
+          "allow_retroactive": "Autoriser le recalcul des coûts passés"
+        },
+        "description": "Laisse les champs de tarif vides pour modifier uniquement la fréquence. Le montant de l’abonnement est saisi par compteur électrique."
       }
+    },
+    "error": {
+      "tariff_fields_required": "Renseigne un prix du kWh et une date d’effet.",
+      "retroactive_tariff": "Autorise le recalcul des coûts passés pour modifier un tarif dans le passé.",
+      "invalid_tariff": "Renseigne des montants positifs ou nuls et une date valide."
     }
   },
   "entity": {

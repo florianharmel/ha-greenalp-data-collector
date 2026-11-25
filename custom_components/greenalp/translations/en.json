@@ -22,9 +22,19 @@
     "step": {
       "init": {
         "data": {
-          "interval_hours": "Interval in hours"
-        }
+          "interval_hours": "Interval in hours",
+          "price_per_kwh": "Fixed price incl. VAT (EUR/kWh)",
+          "monthly_subscription": "Monthly subscription incl. VAT per meter (EUR)",
+          "effective_from": "Tariff start date (Europe/Paris)",
+          "allow_retroactive": "Allow recalculation of past costs"
+        },
+        "description": "Leave the tariff fields empty to change only the sync interval. The subscription is entered per electricity meter."
       }
+    },
+    "error": {
+      "tariff_fields_required": "Enter a price per kWh and a start date.",
+      "retroactive_tariff": "Confirm the recalculation of past costs to change a past tariff.",
+      "invalid_tariff": "Enter valid non-negative amounts and a valid date."
     }
   },
   "entity": {
