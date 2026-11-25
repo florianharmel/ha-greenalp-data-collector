@@ -4,7 +4,7 @@ Intégration personnalisée pour Home Assistant Core **2026.11.3**. Elle importe
 
 ## Installation
 
-- **HACS** `→` **Dépôts personnalisés**. Ajouter l’URL GitHub du dépôt publié, catégorie **Intégration**, puis télécharger **GreenAlp Data Collector** et redémarrer Home Assistant.
+- **HACS** `→` **Dépôts personnalisés**. Ajouter `https://github.com/florianharmel/ha-greenalp-data-collector`, catégorie **Intégration**, puis télécharger **GreenAlp Data Collector** et redémarrer Home Assistant. Le dépôt doit être public pour être accessible à HACS.
 - **Installation locale**. Copier le dossier `custom_components/greenalp` dans `config/custom_components`, puis redémarrer Home Assistant.
 - Dans **Paramètres → Appareils et services → Ajouter une intégration**, sélectionner **GreenAlp Data Collector** et saisir les identifiants Ma Conso. À la première collecte, l’intégration importe tout l’historique disponible dans l’export.
 - Dans les paramètres du tableau de bord **Énergie**, ajouter la statistique externe **GreenAlp Électricité …** correspondante sous **Consommation du réseau**. Sélectionner chaque compteur souhaité une seule fois. Vérifier que le fuseau Home Assistant est `Europe/Paris` si l’on souhaite retrouver les mêmes bornes des journées que dans Ma Conso.
@@ -40,8 +40,6 @@ Pour désinstaller, retirer la série de la configuration Énergie, supprimer l�
 Avec Docker Desktop ou Docker Engine lancé, exécuter `docker compose up -d` et ouvrir `http://127.0.0.1:18123`. Le conteneur utilise la version cible et la configuration isolée `.ha-test/`. Après une modification, exécuter `docker compose restart`. Pour arrêter l’environnement, exécuter `docker compose down`. La configuration locale est conservée et ignorée par Git.
 
 Exécuter les tests Python indépendants avec `python3 -m unittest discover -s tests -v`. Le jeu de données est fictif. Ne jamais déposer de HAR, d’export personnel, d’identifiants ou de journaux dans le dépôt. Voir [le contrat de données](EXPLORATION.md).
-
-Avant publication, renseigner l’URL du dépôt et du suivi des problèmes dans `custom_components/greenalp/manifest.json`, puis vérifier l’installation du dépôt personnalisé depuis HACS.
 
 Pour tester le Config Flow et les réimports sur un vrai Recorder avec un répertoire
 temporaire, lancer le test d’intégration dans la même image Docker.

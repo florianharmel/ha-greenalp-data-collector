@@ -4,11 +4,11 @@
   "dependencies": [
     "recorder"
   ],
-  "documentation": "https://github.com/OWNER/greenalp-data-collector#readme",
+  "documentation": "https://github.com/florianharmel/ha-greenalp-data-collector#readme",
   "domain": "greenalp",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/OWNER/greenalp-data-collector/issues",
+  "issue_tracker": "https://github.com/florianharmel/ha-greenalp-data-collector/issues",
   "name": "GreenAlp Data Collector",
   "requirements": [],
   "version": "0.2.0"
